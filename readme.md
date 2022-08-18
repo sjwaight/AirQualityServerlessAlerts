@@ -23,6 +23,7 @@ Further information coming shortly.
     "AIRDATA_COSMOS_DB": "airdata",
     "AIRDATA_COSMOS_COLLECTION": "airdataitems",
     "AIRDATA_COSMOS_SPROC": "GetAirQualityRecords",
+    "AIRDATA_COSMOS_PARTITION_KEY": "{your_device_id}",
     "ALERT_FLAG_COLLECTION": "alertcontroller",
     "ALERT_FLAG_ITEM_ID": "alertflag",
     "COSMOS_HOST": "https://{your_cosmos_db_acount}.documents.azure.com:443/",

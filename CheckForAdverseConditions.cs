@@ -45,7 +45,7 @@ namespace Siliconvalve.Demo
 
                 IReadOnlyList<SensorData> dataBlock = null;
 
-                var options = new RequestOptions { PartitionKey = new PartitionKey("PurpleAir-b70") };
+                var options = new RequestOptions { PartitionKey = new PartitionKey((Environment.GetEnvironmentVariable("MESSAGE_SENDER")) };
 
                 using (var dbClient = new DocumentClient(new Uri(Environment.GetEnvironmentVariable("COSMOS_HOST")), Environment.GetEnvironmentVariable("COSMOS_KEY")))  
                 {
