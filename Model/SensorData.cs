@@ -2,41 +2,43 @@
 
 namespace Siliconvalve.Demo.Model
 {
-     using System.Text.Json.Serialization;
+    using Newtonsoft.Json;
+    using System;
        
     public class SensorData
     {
 
-        [JsonPropertyName("name")]
+        [JsonProperty("name")]
         public string? SensorName { get; set; }
-        [JsonPropertyName("readtime")]
-        public string? ReadingTime { get; set; }
 
-        [JsonPropertyName("latitude")]
+        [JsonProperty("readingtime")]
+        public DateTime? ReadingTime { get; set; }
+
+        [JsonProperty("latitude")]
         public double Latitude { get; set; }
 
-        [JsonPropertyName("longitude")]
+        [JsonProperty("longitude")]
         public double Longitude { get; set; }
 
-        [JsonPropertyName("pressure")]
+        [JsonProperty("pressure")]
         public double PressureMillibars { get; set; }
 
-        [JsonPropertyName("humidity")]
+        [JsonProperty("humidity")]
         public int Humidity { get; set; }
         
-        [JsonPropertyName("temperature")]
+        [JsonProperty("temperature")]
         public int Temperature { get; set; }
 
-        [JsonPropertyName("pm25atma")]
+        [JsonProperty("pm25atma")]
         public double Pm25ChannelA { get; set; }
 
-        [JsonPropertyName("pm25atmb")]
+        [JsonProperty("pm25atmb")]
         public double Pm25ChannelB { get; set; }
 
-        [JsonPropertyName("pm100atma")]
+        [JsonProperty("pm100atma")]
         public double Pm10ChannelA { get; set; }
 
-        [JsonPropertyName("pm100atmb")]
+        [JsonProperty("pm100atmb")]
         public double Pm10ChannelB { get; set; }
    }
 }
