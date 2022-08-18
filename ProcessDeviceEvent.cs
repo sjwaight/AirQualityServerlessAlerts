@@ -13,7 +13,6 @@ namespace Siliconvalve.Demo
 {
     public class ProcessDeviceEvent
     {
-        [Disable()]
         [FunctionName("ProcessDeviceEvent")]
         public static async Task Run(
             [IoTHubTrigger("messages/events", Connection = "IOT_HUB_CONNECTION")]EventData[] eventHubMessages, 
