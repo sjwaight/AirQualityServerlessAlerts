@@ -5,7 +5,7 @@ This repository contains an Azure Function app with two Functions.
 - ProcessDeviceEvent: reads incoming events from an Azure IoT Hub (via the IoT Hub's Event Hub compatible endpoint) and writes the events to an Azure Cosmos DB Collection setup to support the SQL API.
 - CheckForAdverseConditions: reads new records from Cosmos DB's change feed and uses this as a trigger to read a batch of air quality events from Cosmos DB which are then submitted to Azure Anomaly Detector for determine if adverse air conditions may exist. If an anomaly is found, the Function calls out to a Twilio API and sends an SMS to pre-determined mobile phone number.
 
-Further information coming shortly.
+If you want to understand the context for the code in this repository, check out this blog post: https://blog.siliconvalve.com/2022/08/23/real-time-air-quality-monitoring-and-alerting-part-3-bringing-it-all-together/
 
 ### Sample local.settings.config
 
