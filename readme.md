@@ -41,8 +41,8 @@ If you want to understand the context for the code in this repository, check out
 This stored procedue is very basic and simply returns all documents in the collection. It assumes you have a TTL on the collection to ensure it never grows over a reasonable size (for our purpose we don't need more than 50 documents).
 
 ```javascript
-// SAMPLE STORED PROCEDURE
-function sample(prefix) {
+// Read all Air Quality records from container
+function GetAirQualityRecords(prefix) {
     var collection = getContext().getCollection();
 
     // Query documents and take 1st item.
