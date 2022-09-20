@@ -11,8 +11,8 @@ namespace Siliconvalve.Demo.Model
         [JsonProperty("name")]
         public string? SensorName { get; set; }
 
-        [JsonProperty("readingtime")]
-        public DateTime? ReadingTime { get; set; }
+        [JsonProperty("readtime")]
+        public DateTime? ReadTime { get; set; }
 
         [JsonProperty("latitude")]
         public double Latitude { get; set; }

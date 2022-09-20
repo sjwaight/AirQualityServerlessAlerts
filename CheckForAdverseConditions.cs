@@ -18,6 +18,7 @@ namespace Siliconvalve.Demo
 {
     public class CheckForAdverseConditions
     {
+        [Disable()]
         [FunctionName("CheckForAdverseConditions")]
         public async Task Run([CosmosDBTrigger(
             databaseName: "%AIRDATA_COSMOS_DB%",
@@ -66,8 +67,8 @@ namespace Siliconvalve.Demo
                     // Prepare Data to submit to Anomaly Detector API
                     /////
 
-                    var readingTimes = new List<string>();
-                    var temperatureReadings = new List<float>();
+                    var readingTimes = new List<string>() { "", "",""}; 
+                    var temperatureReadings = new List<float>() { 1.23f, 2.21f, 1.1f };
                     var humidityReadings = new List<float>();
                     var pm10Readings = new List<float>();
                     var pm25Readings = new List<float>();
@@ -78,7 +79,7 @@ namespace Siliconvalve.Demo
                         var pm25Reading = (sensorDataItem.Pm25ChannelA > sensorDataItem.Pm25ChannelB) ? sensorDataItem.Pm25ChannelA : sensorDataItem.Pm25ChannelB;
                         var pm10Reading = (sensorDataItem.Pm10ChannelA > sensorDataItem.Pm10ChannelB) ? sensorDataItem.Pm10ChannelA : sensorDataItem.Pm10ChannelB;
 
-                        readingTimes.Add(sensorDataItem.ReadingTime.ToString());
+                        readingTimes.Add(sensorDataItem.ReadTime.ToString());
                         temperatureReadings.Add(sensorDataItem.Temperature);
                         humidityReadings.Add(sensorDataItem.Humidity);
                         pm10Readings.Add(((float)pm10Reading));
