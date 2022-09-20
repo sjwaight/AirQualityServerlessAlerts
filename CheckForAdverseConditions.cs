@@ -18,7 +18,6 @@ namespace Siliconvalve.Demo
 {
     public class CheckForAdverseConditions
     {
-        [Disable()]
         [FunctionName("CheckForAdverseConditions")]
         public async Task Run([CosmosDBTrigger(
             databaseName: "%AIRDATA_COSMOS_DB%",
