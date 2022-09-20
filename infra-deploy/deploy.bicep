@@ -396,11 +396,11 @@ resource sites_swairmonitor_name_resource 'Microsoft.Web/sites@2021-03-01' = {
         }
         {
           name: 'APPINSIGHTS_INSTRUMENTATIONKEY'
-          value: '952b15f3-c059-47f4-ad24-27f87095625c'
+          value: 'PLACEHOLDER'
         }
         {
           name: 'COSMOS_DB_CONNECTION'
-          value: 'AccountEndpoint=https://swairmonitor.documents.azure.com:443/;AccountKey=EwWVzu9L3qKw0EIFzx2DjFzqK5VPIWEuELt64FQ8OJk8Plp1sQnvQLCIEnzLR8P9hLo3k8YgFIAozO4pAo24QA==;'
+          value: 'AccountEndpoint=https://${cosmos_account_airmonitor.name}.documents.azure.com:443/;AccountKey=${cosmos_account_airmonitor.listKeys().primaryMasterKey}'
         }
         {
           name: 'COSMOS_HOST'
