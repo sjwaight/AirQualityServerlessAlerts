@@ -66,8 +66,8 @@ namespace Siliconvalve.Demo
                     // Prepare Data to submit to Anomaly Detector API
                     /////
 
-                    var readingTimes = new List<string>() { "", "",""}; 
-                    var temperatureReadings = new List<float>() { 1.23f, 2.21f, 1.1f };
+                    var readingTimes = new List<string>(); 
+                    var temperatureReadings = new List<float>();
                     var humidityReadings = new List<float>();
                     var pm10Readings = new List<float>();
                     var pm25Readings = new List<float>();
