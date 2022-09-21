@@ -37,7 +37,7 @@ namespace Siliconvalve.Demo
             }
             catch (Exception e)
             {
-                log.LogError(e,$"Detection error. {e.Message}");
+                log.LogError(e,$"Message processing error. {e.Message}");
                 throw;
             }
         }
